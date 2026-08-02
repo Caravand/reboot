@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Privacy Policy — Reboot Mapper</title>
+<title>Privacy Policy — The Biological Reboot</title>
 <style>
   :root {
     --ink: #0c1d28;
@@ -111,35 +111,35 @@
 <body>
 <div class="wrap">
 
-<h1>Privacy Policy — Reboot Mapper</h1>
+<h1>Privacy Policy — The Biological Reboot</h1>
 
-<p class="meta"><strong>Effective date:</strong> upon first public App Store release (last updated July 23, 2026)</p>
+<p class="meta"><strong>Effective date:</strong> July 24, 2026 (last updated July 31, 2026)</p>
 <p class="meta"><strong>Publisher:</strong> Andrew Caravello, DO (individual developer)</p>
 <p class="meta"><strong>Contact:</strong> andrewcaravello@gmail.com</p>
 
 <hr />
 
 <h2>Summary</h2>
-<p>Reboot Mapper is a <strong>local-first wellness app</strong>. Everything you enter — your profile, biomarkers, supplement stack, daily practice logs, lessons you bookmark, notes you write — stays on your device. We do not operate a server. We do not have an account system. We do not collect, transmit, sell, share, or analyze your data.</p>
+<p>The Biological Reboot is a <strong>local-first wellness app</strong>. Your profile, biomarkers, supplement stack, daily practice logs, bookmarks, notes, and conversations are stored on your device. We do not operate a publisher server or account system, and we do not receive, sell, or analyze your data. There are two user-directed exceptions: Ask sends the question and disclosed context to Anthropic and, when needed, search terms to named research services; encrypted backup sends a protected file only to the destination you choose in the iOS share sheet.</p>
 <p>If you uninstall the app, your data is gone. If you back up your iPhone to iCloud (the default), Apple's device backup includes the app's data — restored automatically when you set up a new phone "from iCloud Backup." For full portability between devices or for protection against uninstall, the app provides an in-app encrypted backup feature (see "Backups," below).</p>
 
 <hr />
 
 <h2>What we collect</h2>
 <p><strong>Nothing on our end.</strong> We do not operate any server, cloud service, analytics endpoint, advertising network, or third-party data partnership. The app contains no Google Analytics, no Facebook SDK, no Mixpanel, no Sentry, no Firebase, no Amplitude, no telemetry of any kind.</p>
-<p><strong>What you enter into the app stays on your device.</strong> Specifically:</p>
+<p><strong>What you enter is stored on your device by default.</strong> Ask sends only the categories listed in its consent sheet when you choose to send a question. Specifically:</p>
 <table>
   <thead><tr><th>Data</th><th>Where it lives</th></tr></thead>
   <tbody>
-    <tr><td>Profile (year of birth, biological sex, menopausal status, medication list, supplement stack, life-stage flags)</td><td>iPhone local storage</td></tr>
-    <tr><td>Biomarker entries (CRP, NLR, ferritin, vitamin D, etc.)</td><td>iPhone local storage</td></tr>
+    <tr><td>Profile (year of birth, biological sex, menopausal status, medication list, supplement stack, life-stage flags)</td><td>iPhone local storage. Ask can include the disclosed safe profile fields and stack entries after consent; the dedicated disease fields listed below are excluded from the automatic snapshot.</td></tr>
+    <tr><td>Biomarker entries (CRP, NLR, ferritin, vitamin D, etc.)</td><td>iPhone local storage. The listed entered biomarker values are included when you consent and send an Ask question.</td></tr>
     <tr><td>Daily practice logs (sleep hours, exercise minutes, prep checklist)</td><td>iPhone local storage</td></tr>
     <tr><td>Lesson bookmarks and notes</td><td>iPhone local storage</td></tr>
-    <tr><td>Apple Health data read into the app (HRV, sleep stages, resting HR, workouts, etc.)</td><td>Cached on iPhone; never transmitted</td></tr>
+    <tr><td>Apple Health data read into the app (HRV, sleep stages, resting HR, workouts, etc.)</td><td>Raw samples cached on iPhone and not sent. Derived scores and trends may be included only when you enable Ask, consent, and send a question.</td></tr>
     <tr><td>App settings (complexity mode, hormone therapy context, framework assistant key, etc.)</td><td>iPhone local storage</td></tr>
   </tbody>
 </table>
-<p>The app uses your iPhone's built-in browser storage (WKWebView localStorage). No cloud account. No login. No personal identifier sent off the device.</p>
+<p>The app uses your iPhone's built-in browser storage (WKWebView localStorage). There is no publisher cloud account or login. The app does not add an account identifier because none exists; text or images you choose to send through Ask may still contain identifying information.</p>
 
 <hr />
 
@@ -158,10 +158,8 @@
   <li>Respiratory Rate (overnight)</li>
   <li>Blood Oxygen (overnight SpO₂)</li>
   <li>VO₂max / Cardio Fitness</li>
-  <li>Wrist Temperature</li>
-  <li>Height / Weight (for BMI calculations)</li>
 </ul>
-<p>The app reads these to derive its framework readings (e.g., the Reboot Score, the Install Pulse Window, the 22-Lock Coverage map). All reading happens on-device. The app does not transmit Apple Health data anywhere.</p>
+<p>The app reads these to derive its framework readings (e.g., the Reboot Score, the Install Pulse Window, the 22-Lock Coverage map). Raw Apple Health samples stay on-device. If you separately enable Ask and send a question, the on-device scores and trends derived from those samples are included in the context snapshot described below; the raw samples are not.</p>
 <p>The app <strong>writes nothing</strong> to Apple Health.</p>
 <p>You can revoke HealthKit access at any time from iOS Settings → Privacy &amp; Security → Health → Reboot.</p>
 
@@ -170,7 +168,7 @@
 <h2>Backups (the encrypted-file feature)</h2>
 <p>The app provides a "Back up · restore from file" feature in Settings (and a periodic Today-tab reminder). When you use it:</p>
 <ol>
-  <li>The app collects your profile + practice logs into a single bundle on-device.</li>
+  <li>The app collects your profile + practice logs into a single bundle on-device. The bundle excludes your Anthropic API key, AI consent record, current conversation, saved conversations, and chat folders.</li>
   <li>You set a <strong>passphrase</strong>. The app encrypts the bundle with <strong>AES-GCM 256</strong> (a standard symmetric cipher) using a key derived from your passphrase via <strong>PBKDF2-SHA256 with 200,000 iterations</strong> and a unique random salt.</li>
   <li>iOS's native share sheet opens. You choose where to save the encrypted file — typically Files → iCloud Drive, AirDrop to another device, or email to yourself. The file extension is <code>.reboot</code>.</li>
   <li>The encryption happens <strong>before the file leaves the app</strong>. The file is unreadable without your passphrase.</li>
@@ -186,7 +184,8 @@
 <h3>Ask the framework about your data — Anthropic Claude (off by default)</h3>
 <p><strong>Where it lives.</strong> The app's home screen — "Ask The Biological Reboot." Configuration, consent, and conversation history live on the home screen; the revoke control lives in Settings (opened from the menu).</p>
 <p><strong>What triggers transmission.</strong> Tapping Send on a question, after consent has been granted. No data is sent on app launch, on profile changes, on biomarker entry, on Stack edits, or on any background interval. The app has no scheduled outbound traffic of any kind.</p>
-<p><strong>The third-party AI service.</strong> <strong>Anthropic, PBC</strong> — operator of the Claude AI service. Each question is sent to <code>https://api.anthropic.com/v1/messages</code> using <strong>your own</strong> <code>sk-ant-…</code> API key. Anthropic bills the call to your Anthropic account, not to this app. Anthropic's handling of your data is governed by their privacy policy at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a> and consumer terms at <a href="https://www.anthropic.com/legal/consumer-terms">anthropic.com/legal/consumer-terms</a>. They are not affiliated with this app or its author. Anthropic is the only third party your data is shared with, and its published API terms and privacy policy (linked above) commit it to protecting that data to a standard equal to or greater than this policy describes.</p>
+<p><strong>The third-party AI service.</strong> <strong>Anthropic, PBC</strong> — operator of the Claude AI service. Each question is sent to <code>https://api.anthropic.com/v1/messages</code> using <strong>your own</strong> <code>sk-ant-…</code> API key. Anthropic bills the call to your Anthropic account, not to this app. Anthropic's handling of your data is governed by their privacy policy at <a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a> and commercial terms at <a href="https://www.anthropic.com/legal/commercial-terms">anthropic.com/legal/commercial-terms</a>. They are not affiliated with this app or its author. The separate public research services named below receive only search terms, never the profile context sent to Anthropic.</p>
+<p><strong>Account linkage.</strong> Your API key authenticates the request to your Anthropic account. Anthropic can therefore associate the question, attachment, and included context with that account. For Apple's App Privacy disclosure, these transmitted categories are declared as data linked to you, used for App Functionality, and not used for tracking or advertising.</p>
 <p><strong>Web search.</strong> When a question reaches past what the book and its mechanism map contain, Claude may run a web search through Anthropic to answer it. Your question text, or a search query derived from it, then travels to Anthropic and on to the open web. Results are read through the framework and never override the book. This is named in the in-app consent sheet, and consent is required before any question is sent.</p>
 <p><strong>PubMed literature search.</strong> When the assistant needs a specific study, trial, dose, or citation, it runs a live search against the U.S. National Library of Medicine's PubMed (NCBI E-utilities). The search terms, built from your question, are sent <strong>directly from your device to PubMed</strong> — a second outbound destination separate from Anthropic; no other profile data is sent there. This is what lets the assistant cite a real paper by its PMID rather than relying on model memory. It is named in the in-app consent sheet, and consent is required before any question is sent.</p>
 <p><strong>Clinical-trial, drug-label, and additional-literature searches.</strong> For a specific trial, a drug label, or a paper PubMed did not surface, the assistant may also query — directly from your device — <strong>ClinicalTrials.gov</strong> (the U.S. NIH clinical-trials registry), <strong>openFDA</strong> (the U.S. Food and Drug Administration drug-label API), and <strong>Europe PMC</strong> (the EMBL-EBI biomedical-literature service). As with PubMed, only the search terms built from your question travel to these services; no other profile data is sent. Each is named in the in-app consent sheet, and consent is required before any question is sent.</p>
@@ -194,38 +193,39 @@
 <p><strong>What is sent on each question.</strong></p>
 <ul>
   <li>Your question text.</li>
-  <li><strong>Safe profile fields only:</strong> age, biological sex, framework stage placement, complexity-mode preference.</li>
-  <li><strong>Lifestyle / habit flags only:</strong> PEM, anticoagulant use, alcohol, smoking, cannabis, CKD, eating-disorder history, low-dose steroid, chronic pain, AF/rate-control, PPI use.</li>
-  <li>Your biomarkers: every lab value you have entered into the app.</li>
+  <li><strong>Profile context:</strong> age, biological sex, framework stage placement, complexity-mode preference, and the care recipient's entered first name or label when caregiver mode is active.</li>
+  <li><strong>Lifestyle / habit flags only:</strong> alcohol use, smoking, cannabis use, and PPI use, when marked in your profile. Clinical-condition and medication flags are not included.</li>
+  <li>Your entered values for these biomarker fields: vitamin D, hs-CRP, A1c, NLR, ferritin, B12, homocysteine, LDL-C, HDL-C, TSH, and VO₂max.</li>
   <li>Your current stack: every item you've added (name, timing, paused state, <strong>the dose you typed in</strong>, when added). Echoing back your own data, not a calculation output.</li>
   <li>Your recent symptoms: up to 25 most-recent symptom entries (each capped at 500 characters).</li>
-  <li>Your lifestyle / engine state: current Reboot Score, Immune Rest Score with 7-day moving average and 30-day trend, Reboot Prep streak, 22-lock coverage with the specific locks that are uncovered or opposed, planned sleep onset.</li>
+  <li>Your lifestyle / engine state: current Reboot Score, Immune Rest Score with 7-day moving average and 30-day trend, Reboot Prep continuity, 22-lock coverage with the specific locks that are uncovered or opposed, planned sleep onset, self-reported typical sleep, and self-reported typical weekly exercise.</li>
   <li>Catalog-canon entries matching your question: Biological Reboot rationale, mechanism notes, citations, and <strong>the canon-derived literature dose range as educational reference material</strong>. The catalog dose data is peer-reviewed-cited reference content (analogous to a drug monograph or textbook entry, per FDA MMA Guidance Appendix A Example 1 — electronic copies of reference materials are non-device). The AI surfaces these ranges framed as "the literature commonly references X," never as a patient-specific recommendation.</li>
 </ul>
-<p><strong>What is NEVER sent (regulatory quarantine — Apple Guideline 1.4.2 + FDA SaMD policy).</strong></p>
-<p>By structural code-logic policy in build 326, the app NEVER transmits the following to Anthropic, <strong>regardless of your consent state</strong>. These fields remain in the app for the in-app safety banner system, the catalog Stack-add contraindication gates, and the lock-coverage engine — but they are quarantined from any AI prompt.</p>
+<p><strong>Dedicated profile fields not added automatically.</strong></p>
+<p>The app does not automatically add the following dedicated profile fields to an Anthropic context snapshot. They remain available to the app's on-device safety banners, Stack-add checks, and framework map:</p>
 <ul>
-  <li><strong>Pregnancy status</strong> — never transmitted (contraindication-relevant for immunotherapy discussions; FDA SaMD trigger per intended-use doctrine, 21 CFR 801.4).</li>
-  <li><strong>Cancer phase, cancer stage, or cancer history</strong> — never transmitted (disease-state classification; FDA "patient-specific analysis with specific output" doctrine).</li>
-  <li><strong>CHIP variant</strong> — never transmitted (WHO-classified pre-malignant condition; sending this would convert the feature into cancer-risk counseling).</li>
-  <li><strong>Active immunosuppressant / transplant indicator</strong> — never transmitted.</li>
-  <li><strong>Autoimmune disease status</strong> — never transmitted (disease-state classification).</li>
-  <li><strong>Menopausal status</strong> — never transmitted (gendered disease-adjacent per Apple 1.4.1).</li>
-  <li><strong>Hormone therapy context</strong> — never transmitted (HRT is prescription / clinical territory).</li>
-  <li><strong>Patient-specific dose calculations</strong> — the AI will not compute a dose based on your weight, age, kidney function, biomarkers, or any individualized parameter. Apple App Store Guideline 1.4.2 regulates drug-dosage <em>calculators</em> (apps that compute patient-specific doses from inputs). It does not regulate general literature dose ranges presented as educational reference (per FDA MMA Guidance Appendix A Example 1). The catalog passes the canon-derived literature range as reference; the AI declines patient-specific calculation requests and directs prescription-drug dosing decisions to the user's clinician.</li>
+  <li>Pregnancy status</li>
+  <li>Cancer phase, cancer stage, or cancer history</li>
+  <li>CHIP variant</li>
+  <li>Active immunosuppressant / transplant indicator</li>
+  <li>Autoimmune disease status</li>
+  <li>Menopausal status</li>
+  <li>Hormone therapy context</li>
 </ul>
+<p><strong>User-entered text can contain the same information.</strong> Your question, symptom notes, stack entries, and any attached image are sent as entered. If you type or attach a diagnosis, medication, pregnancy status, or other sensitive fact in one of those places, Anthropic receives that content. The in-app preview lets you inspect the assembled request before sending.</p>
+<p><strong>No individualized dose calculator.</strong> The assistant is instructed not to calculate a medication or supplement dose from your age, weight, kidney function, biomarkers, or other individualized parameters. Catalog literature ranges may be included as educational reference and should be checked with a clinician.</p>
 <p><strong>Other things that never leave the device:</strong></p>
 <ul>
-  <li>Your Anthropic API key never leaves the device beyond the single API call it authenticates.</li>
+  <li>Your Anthropic API key is sent only to Anthropic to authenticate requests you initiate in Ask. One interaction may require more than one API request, for example when tools are used.</li>
   <li>Your Apple Health raw data (sleep stages, HRV values, workout history, etc.) is read by the app and used to compute the engine outputs above, but the raw HealthKit data itself is not forwarded — only the computed engine state is.</li>
-  <li>Your conversation history with Anthropic is stored only on this device (last 8 turns); the app has no server.</li>
+  <li>Your conversation history with Anthropic is stored only on this device (last 16 turns, or 8 back-and-forth exchanges); the app has no publisher server.</li>
   <li>Everything outside the "Ask The Biological Reboot" surface stays on the device.</li>
 </ul>
 <p><strong>Camera and photos (optional).</strong> If you attach a photo to a question in Ask, for example a lab report, a supplement label, or a food item, that image is sent to Anthropic together with your question, the same way your text is, and only after you have enabled Ask, consented, and explicitly attached the image. The app accesses your camera or photo library only at the moment you tap to attach, uses the image solely to answer that question, stores it nowhere off the device, and transmits it nowhere except Anthropic for that single request.</p>
-<p><strong>Why these specific fields are quarantined.</strong> Sending disease-coded fields (CHIP, transplant, pregnancy, active cancer, autoimmune) to a third-party AI as part of a health prompt is the fact pattern FDA's Software-as-a-Medical-Device guidance classifies as a regulated device output ("patient-specific analysis that provides specific output to caregivers or patients" — FDA Policy for Device Software Functions, Appendix B). Sending specific supplement or drug doses is Apple's 1.4.2 prohibition on drug-dosage-calculator output from non-approved entities. Enforcing this quarantine in code, not just in UI, means the regulatory boundary holds even if a future contributor adds a new disease-coded profile field. The list of quarantined fields lives at the top of the AI module as the <code>AI_DISEASE_CODED_FIELDS</code> constant.</p>
-<p><strong>Revocation.</strong> Tap "Revoke Anthropic connection" in Settings (from the menu). This deletes the saved API key, the conversation history, and the consent record from your device, and hides the ✦ chat button. The next time you enable the feature, the full consent dialog will appear again.</p>
-<p><strong>Storage on Anthropic's side.</strong> Subject to Anthropic's own data-handling policy linked above. We have no control over and no visibility into Anthropic's retention. Most consumer API usage is not used for model training by default (see Anthropic's policy), but this depends on settings in your Anthropic account, not on this app.</p>
-<p><strong>Cost.</strong> Pay-as-you-go to Anthropic. Anthropic bills your own Anthropic account directly under Anthropic's own pricing and terms, and we never see your payment details. Reboot Mapper does not sell, resell, mark up, or take any share of Claude access. The app does not collect any subscription, license, or transaction fee for using this feature.</p>
+<p><strong>Design boundary.</strong> The automatic context is intentionally narrower than the on-device profile. This keeps disease-specific safety decisions in the app's authored rules and leaves diagnosis, treatment, and individualized prescribing to licensed clinicians.</p>
+<p><strong>Revocation.</strong> Tap "Revoke Anthropic connection" in Ask. This deletes the saved API key and conversation history, disables the shortcut, and records the grant and revocation timestamps locally so the app knows consent is no longer active. The next time you enable the feature, the full consent dialog appears again.</p>
+<p><strong>Storage on Anthropic's side.</strong> Anthropic states that standard API inputs and outputs are automatically deleted from its backend within 30 days, subject to stated exceptions such as legal or usage-policy enforcement, separately controlled services, or a different agreement. Anthropic also states that commercial API inputs and outputs are not used to train its models unless the customer explicitly opts in or reports material. See Anthropic's <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data">API retention explanation</a>, <a href="https://privacy.claude.com/en/articles/10030352-what-personal-data-will-be-processed-by-computer-use">commercial training explanation</a>, and <a href="https://www.anthropic.com/legal/commercial-terms">Commercial Terms</a>. These policies are controlled by Anthropic and may change.</p>
+<p><strong>Cost.</strong> Pay-as-you-go to Anthropic. Anthropic bills your own Anthropic account directly under Anthropic's own pricing and terms, and we never see your payment details. The Biological Reboot does not sell, resell, mark up, or take any share of Claude access. The app does not collect any subscription, license, or transaction fee for using this feature.</p>
 <p><strong>Live research tools are enabled.</strong> The framework-plus-research capability described above (Anthropic web search, PubMed, ClinicalTrials.gov, openFDA, and Europe PMC) is active in the current build. Every one of these destinations is named in the in-app consent dialog, and your affirmative consent is required before any question — and therefore any outbound search — is sent.</p>
 
 <hr />
@@ -258,7 +258,7 @@
 
 <h2>Medical disclaimer (not a privacy clause — but stated here for completeness)</h2>
 <p>The app is for <strong>educational and wellness purposes only</strong>. It does not provide medical advice, diagnosis, or treatment. It does not establish a doctor-patient relationship between you and the publisher. Always consult a licensed healthcare provider about any health condition. Never start, stop, or change medication based on what the app suggests; talk to your prescriber first.</p>
-<p>The app's framework is built on peer-reviewed scientific literature but the <strong>synthesis</strong> (the cascade model and 22-lock map) has not itself been peer-reviewed.</p>
+<p>The core proposed mechanism chain is described in a peer-reviewed <em>Hypothesis and Theory</em> article in <em>Frontiers in Immunology</em> (<a href="https://doi.org/10.3389/fimmu.2026.1861044">doi:10.3389/fimmu.2026.1861044</a>). Publication does not establish that the hypothesis is correct. The broader 22-lock book/app extension and the app's personal interpretations have not been independently validated.</p>
 
 <hr />
 
@@ -281,7 +281,7 @@
 <h2>Contact</h2>
 <p><strong>Andrew Caravello, DO</strong><br />
 Email: andrewcaravello@gmail.com<br />
-Subject line: "Reboot privacy" or "Reboot Mapper privacy"</p>
+Subject line: "Reboot privacy" or "The Biological Reboot privacy" (mail sent with the older "The Biological Reboot privacy" subject still reaches the same inbox)</p>
 <p>For scholarly correspondence on the framework itself, use subject line "Reboot Correspondence" — see the in-app Settings → "Author bio + correspondence" surface for the author bio and contact channels.</p>
 
 <em class="footer-note">This policy is linked from the App Store listing and from within the app's Settings.</em>
