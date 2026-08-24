@@ -42,14 +42,14 @@
 <div class="wrap">
   <p class="eyebrow">The Biological Reboot</p>
   <h1>Support</h1>
-  <p class="meta">Companion app to the book <em>The Biological Reboot</em>. Last updated July 31, 2026.</p>
+  <p class="meta">Companion app to the book <em>The Biological Reboot</em>. Last updated August 24, 2026.</p>
 
   <div class="card">
     <p class="contact" style="margin:0;"><strong>Need help?</strong> Email <a href="mailto:andrewcaravello@gmail.com?subject=Reboot%20support">andrewcaravello@gmail.com</a> with the subject line <strong>&ldquo;Reboot support.&rdquo;</strong> Please include your iOS version and a short description of what you saw. We usually reply within a few days.</p>
   </div>
 
   <h2>What the app is</h2>
-  <p>The Biological Reboot turns the book&rsquo;s framework into a calm, local-first daily practice. Its core reading, Map, Stack, lessons, and book work on your device with no app account, tracking, subscription, or in-app purchase. The optional Ask feature requires a funded Anthropic API key and sends only the question and context disclosed in its consent sheet.</p>
+  <p>The Biological Reboot turns the book&rsquo;s framework into a calm, local-first daily practice. Its core reading, Map, Stack, lessons, and book work on your device with no app account, tracking, subscription, or in-app purchase. The optional Ask feature is off by default; it can run on Apple Intelligence on your device, or use your own API key for Claude, GPT, or Gemini, and it sends only the question and context disclosed in its consent sheet.</p>
 
   <h2>Common questions</h2>
 
@@ -60,13 +60,21 @@
   <p>No. You can log sleep and daily inputs by hand and use the book, the Map, and the daily read without a wearable. Apple Health simply fills in more of the picture automatically.</p>
 
   <h3>What is the optional assistant, and do I need a key?</h3>
-  <p>The assistant is optional. To use it you paste your own <strong>Anthropic API key</strong>, which stays on your device. You can ask questions in plain language, or attach a photo of a supplement label or a lab result for the framework&rsquo;s honest read. It contacts Anthropic only when you choose to ask, using your key. You can get a key at <a href="https://platform.claude.com" target="_blank" rel="noopener">platform.claude.com</a>.</p>
+  <p>The assistant is optional and off until you turn it on. You choose how it runs:</p>
+  <ul>
+    <li><strong>Apple Intelligence</strong>, on supported devices &mdash; no key, no provider account, text only.</li>
+    <li><strong>Claude, GPT, or Gemini</strong>, using <strong>your own API key</strong> for that provider. The key stays on your device and is sent only to that provider, to authenticate the questions you send. Keys are available from <a href="https://platform.claude.com" target="_blank" rel="noopener">platform.claude.com</a>, <a href="https://platform.openai.com" target="_blank" rel="noopener">platform.openai.com</a>, or <a href="https://aistudio.google.com" target="_blank" rel="noopener">aistudio.google.com</a>.</li>
+  </ul>
+  <p>You can ask questions in plain language, or attach a photo of a supplement label or a lab result for the framework&rsquo;s honest read. Nothing is sent until you consent in the in-app sheet and tap Send &mdash; and switching providers asks for fresh consent. To turn it off, tap <strong>Revoke AI connection</strong> in Ask; that deletes every saved provider key and the conversation history.</p>
+
+  <h3>Which provider should I pick?</h3>
+  <p>Apple Intelligence is the simplest: nothing to sign up for, nothing to pay, and the question is handled on supported devices without a provider key. It is text-only, though, and does not run the assistant&rsquo;s live research tools. Claude, GPT, and Gemini can additionally search the web and named research services (PubMed, ClinicalTrials.gov, openFDA, Europe PMC) so the assistant can cite a real paper rather than rely on model memory.</p>
 
   <h3>Is there a subscription or in-app purchase?</h3>
-  <p>No. The app has no subscription and no in-app purchases. If you use the optional assistant, Anthropic bills your own Anthropic account directly under their pricing. The app never sees your payment details and takes no share.</p>
+  <p>No. The app has no subscription and no in-app purchases. Apple Intelligence costs nothing extra. If you use Claude, GPT, or Gemini, that provider bills your own API account directly under its pricing. The app never sees your payment details and takes no share.</p>
 
   <h3>Is my data private?</h3>
-  <p>The app is local-first: there is no publisher server, account, analytics, or third-party tracking. Ask sends your explicit question or attachment plus the context named in its consent sheet only when you choose to ask; encrypted backup goes only to the destination you choose. See the <a href="privacy.html">Privacy Policy</a> for the full detail.</p>
+  <p>The app is local-first: there is no publisher server, account, analytics, or third-party tracking. Ask sends your explicit question or attachment plus the context named in its consent sheet only when you choose to ask, and a cloud route may also send search terms built from your question to named research services (PubMed, ClinicalTrials.gov, openFDA, Europe PMC); encrypted backup goes only to the destination you choose. See the <a href="privacy.html">Privacy Policy</a> for the full detail.</p>
 
   <h3>How do I delete my data?</h3>
   <p>Because everything is stored locally, deleting the app removes all of your data. You can also reset your information from within the app&rsquo;s Settings.</p>
