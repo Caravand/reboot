@@ -113,14 +113,14 @@
 
 <h1>Privacy Policy — The Biological Reboot</h1>
 
-<p class="meta"><strong>Effective date:</strong> July 24, 2026 (last updated August 11, 2026)</p>
+<p class="meta"><strong>Effective date:</strong> July 24, 2026 (last updated August 27, 2026)</p>
 <p class="meta"><strong>Publisher:</strong> Andrew Caravello, DO (individual developer)</p>
 <p class="meta"><strong>Contact:</strong> andrewcaravello@gmail.com</p>
 
 <hr />
 
 <h2>Summary</h2>
-<p>The Biological Reboot is a <strong>local-first wellness app</strong>. Your profile, biomarkers, supplement stack, daily practice logs, bookmarks, notes, and conversations are stored on your device. We do not operate a publisher server or account system, and we do not receive, sell, or analyze your data. Ask can use Apple Intelligence on the device, or it can send the question and disclosed context to a cloud provider you select (Anthropic, OpenAI, or Google) and, when needed, search terms to named research services. Encrypted backup sends a protected file only to the destination you choose in the iOS share sheet.</p>
+<p>The Biological Reboot is a <strong>local-first wellness app</strong>. Your profile, biomarkers, supplement stack, condition map, daily practice logs, bookmarks, notes, and conversations are stored on your device. We do not operate a publisher server or account system, and we do not receive, sell, or analyze your data. Ask can use Apple Intelligence on the device, or it can send the question and disclosed context to a cloud provider you select (Anthropic, OpenAI, or Google) and, when needed, search terms to named research services. Encrypted backup sends a protected file only to the destination you choose in the iOS share sheet.</p>
 <p>If you uninstall the app, your data is gone. If you back up your iPhone to iCloud (the default), Apple's device backup includes the app's data — restored automatically when you set up a new phone "from iCloud Backup." For full portability between devices or for protection against uninstall, the app provides an in-app encrypted backup feature (see "Backups," below).</p>
 
 <hr />
@@ -133,6 +133,7 @@
   <tbody>
     <tr><td>Profile (year of birth, biological sex, menopausal status, medication list, supplement stack, life-stage flags)</td><td>iPhone local storage. Ask can include the disclosed safe profile fields and stack entries after consent; the dedicated disease fields listed below are excluded from the automatic snapshot.</td></tr>
     <tr><td>Biomarker entries (CRP, NLR, ferritin, vitamin D, etc.)</td><td>iPhone local storage. The listed entered biomarker values are included when you consent and send an Ask question.</td></tr>
+    <tr><td>Condition Atlas entries and problem plans (diagnoses, symptoms, injuries, recovery states, safety answers, goals, and daily response check-ins you add)</td><td>iPhone local storage. They are not attached to Ask automatically. “Ask about this map” and “Personalize this with Ask” create a visible, editable question draft; its contents are sent only if you press Send.</td></tr>
     <tr><td>Daily practice logs (sleep hours, exercise minutes, prep checklist)</td><td>iPhone local storage</td></tr>
     <tr><td>Lesson bookmarks and notes</td><td>iPhone local storage</td></tr>
     <tr><td>Apple Health data read into the app (HRV, sleep stages, resting HR, workouts, etc.)</td><td>Raw samples cached on iPhone and not sent. Derived scores and trends may be included only when you enable Ask, consent, and send a question.</td></tr>
@@ -168,7 +169,7 @@
 <h2>Backups (the encrypted-file feature)</h2>
 <p>The app provides a "Back up · restore from file" feature in Settings (and a periodic Today-tab reminder). When you use it:</p>
 <ol>
-  <li>The app collects your profile + practice logs into a single bundle on-device. The bundle excludes every AI provider API key, AI consent record, current conversation, saved conversations, and chat folders.</li>
+  <li>The app collects your profile, practice logs, Reader state, Wiki pages, and Condition Atlas entries into a single bundle on-device. The bundle excludes every AI provider API key, AI consent record, current conversation, saved conversations, and chat folders.</li>
   <li>You set a <strong>passphrase</strong>. The app encrypts the bundle with <strong>AES-GCM 256</strong> (a standard symmetric cipher) using a key derived from your passphrase via <strong>PBKDF2-SHA256 with 200,000 iterations</strong> and a unique random salt.</li>
   <li>iOS's native share sheet opens. You choose where to save the encrypted file — typically Files → iCloud Drive, AirDrop to another device, or email to yourself. The file extension is <code>.reboot</code>.</li>
   <li>The encryption happens <strong>before the file leaves the app</strong>. The file is unreadable without your passphrase.</li>
@@ -183,7 +184,7 @@
 
 <h3>Ask the framework about your data — your choice of AI provider (off by default)</h3>
 <p><strong>Where it lives.</strong> The app's home screen — "Ask The Biological Reboot." Configuration, consent, and conversation history live on the home screen; the revoke control lives in Settings (opened from the menu).</p>
-<p><strong>What triggers transmission.</strong> Tapping Send on a question, after consent has been granted. No data is sent on app launch, on profile changes, on biomarker entry, on Stack edits, or on any background interval. The app has no scheduled outbound traffic of any kind.</p>
+<p><strong>What triggers transmission.</strong> Tapping Send on a question, after consent has been granted. No data is sent on app launch, on profile changes, on biomarker entry, on Stack edits, on Condition Atlas or problem-plan edits, on daily response check-ins, or on any background interval. “Ask about this map” and “Personalize this with Ask” only prepare a visible draft in the Ask composer; the draft does not leave the device unless you press Send. The app has no scheduled outbound traffic of any kind.</p>
 <p><strong>The selected AI service.</strong> Apple operates Apple Intelligence through Foundation Models on supported devices; this route is keyless, text-only, and does not use Reboot's live research tools. Anthropic, PBC operates Claude at <code>https://api.anthropic.com/v1/messages</code> (<a href="https://www.anthropic.com/legal/privacy">privacy</a>, <a href="https://www.anthropic.com/legal/commercial-terms">terms</a>). OpenAI, L.L.C. operates GPT at <code>https://api.openai.com/v1/responses</code> (<a href="https://openai.com/policies/privacy-policy/">privacy</a>, <a href="https://openai.com/policies/services-agreement/">terms</a>). Google LLC operates Gemini at <code>https://generativelanguage.googleapis.com</code> (<a href="https://policies.google.com/privacy">privacy</a>, <a href="https://ai.google.dev/gemini-api/terms">terms</a>). Claude, GPT, and Gemini requests use <strong>your own provider API key</strong>; that provider bills your account, not this app. None is affiliated with this app or its author.</p>
 <p><strong>Account linkage for cloud providers.</strong> Your API key authenticates the request to the selected provider account. That provider can therefore associate the question, attachment, and included context with that account. For Apple's App Privacy disclosure, these transmitted categories are declared as data linked to you, used for App Functionality, and not used for tracking or advertising.</p>
 <p><strong>Web search.</strong> When a question reaches past what the book and its mechanism map contain, the selected assistant may run a provider-supported web search. Your question text, or a search query derived from it, can then travel through that provider to the open web. Results are read through the framework and never override the book. This is named in the in-app consent sheet, and consent is required before any question is sent.</p>
@@ -254,7 +255,7 @@
 <hr />
 
 <h2>Children's privacy</h2>
-<p>The app is not designed for children under 13 and does not knowingly collect data from anyone. It carries no advertising and is rated 17+ on the App Store due to the discussion of adult health topics (including medications, supplements, biomarkers, menopause, cancer, autoimmunity).</p>
+<p>The app is not designed for children under 13 and does not knowingly collect data from anyone. It carries no advertising. Apple's current age-rating system classifies its frequent medical and treatment information as 16+; Apple devices running operating systems earlier than version 26 display the corresponding 17+ rating.</p>
 
 <hr />
 
