@@ -36,37 +36,49 @@
   .contact { font-size: 19px; }
   ul { padding-left: 20px; }
   footer { color: var(--cream-faint); font-size: 13px; margin-top: 44px; }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --ink: #f7f1e1;
+      --cream: #1e1a14;
+      --cream-dim: #4a4438;
+      --cream-faint: #6e6755;
+      --rule: rgba(30, 26, 20, 0.15);
+    }
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
   <p class="eyebrow">The Biological Reboot</p>
   <h1>Support</h1>
-  <p class="meta">Companion app to the book <em>The Biological Reboot</em>. Last updated July 31, 2026.</p>
+  <p class="meta">Companion app to the book <em>The Biological Reboot</em>. Last updated August 28, 2026.</p>
 
   <div class="card">
     <p class="contact" style="margin:0;"><strong>Need help?</strong> Email <a href="mailto:andrewcaravello@gmail.com?subject=Reboot%20support">andrewcaravello@gmail.com</a> with the subject line <strong>&ldquo;Reboot support.&rdquo;</strong> Please include your iOS version and a short description of what you saw. We usually reply within a few days.</p>
   </div>
 
   <h2>What the app is</h2>
-  <p>The Biological Reboot turns the book&rsquo;s framework into a calm, local-first daily practice. Its core reading, Map, Stack, lessons, and book work on your device with no app account, tracking, subscription, or in-app purchase. The optional Ask feature requires a funded Anthropic API key and sends only the question and context disclosed in its consent sheet.</p>
+  <p>The Biological Reboot turns the book&rsquo;s framework into a calm, local-first daily wellness instrument. Today, Map, Conditions, plans, Book, Stack, lessons, and check-ins work on your device with no app account, tracking, subscription, or in-app purchase. Ask is optional: use Apple Intelligence on a supported iPhone without a separate key, or connect your own Claude, GPT, or Gemini API key. Nothing is sent until you review the provider-specific disclosure and press Send.</p>
 
   <h2>Common questions</h2>
 
   <h3>How do I connect Apple Health?</h3>
-  <p>Open the menu (top left), choose <strong>Apple Health</strong>, and grant read access. The app reads sleep, heart-rate variability, resting heart rate, deep sleep, cardio fitness, and steps. It is <strong>read-only</strong> and never writes anything back. Permission is per-data-type and can be changed anytime in iOS Settings &rarr; Privacy &amp; Security &rarr; Health.</p>
+  <p>Open the menu, choose <strong>Apple Health</strong>, and grant the read permissions you want. The app can read sleep and sleep stages, heart-rate variability, resting and workout heart rate, workouts, active energy, exercise minutes, steps, mindful minutes, overnight respiratory rate and blood oxygen, and cardio fitness. Access is <strong>read-only</strong>; the app never writes to Apple Health. Permission is per data type and can be changed anytime in iOS Settings &rarr; Privacy &amp; Security &rarr; Health.</p>
 
   <h3>Do I need to connect Apple Health to use the app?</h3>
   <p>No. You can log sleep and daily inputs by hand and use the book, the Map, and the daily read without a wearable. Apple Health simply fills in more of the picture automatically.</p>
 
+  <h3>What happens when I add a condition or symptom?</h3>
+  <p>Conditions accepts a diagnosis, symptom, injury, or recovery state in your own words. When a recognized name is available, the app shows the match and places the problem on the framework map. You can compare several problems and open a separate 30-day plan for each one. This is educational organization, not a diagnosis: a condition alone does not prove a cause, an active molecular lock, or a personal immune state.</p>
+
   <h3>What is the optional assistant, and do I need a key?</h3>
-  <p>The assistant is optional. To use it you paste your own <strong>Anthropic API key</strong>, which stays on your device. You can ask questions in plain language, or attach a photo of a supplement label or a lab result for the framework&rsquo;s honest read. It contacts Anthropic only when you choose to ask, using your key. You can get a key at <a href="https://platform.claude.com" target="_blank" rel="noopener">platform.claude.com</a>.</p>
+  <p>The assistant is optional. <strong>Apple Intelligence</strong> is the private, keyless route on a compatible iPhone when Apple&rsquo;s on-device model is available. It can search a bounded set of relevant passages from the embedded book, Pocket DNA, and Complete Mechanism Chain, but it does not use live web research. For broader context and current research, you can connect your own <strong>Claude, GPT, or Gemini API key</strong>. Supported cloud routes can use attachments and named research services after disclosure and consent. Your saved key stays on your device and is sent only to the provider you select to authenticate a request you initiate.</p>
 
   <h3>Is there a subscription or in-app purchase?</h3>
-  <p>No. The app has no subscription and no in-app purchases. If you use the optional assistant, Anthropic bills your own Anthropic account directly under their pricing. The app never sees your payment details and takes no share.</p>
+  <p>No. The app has no subscription and no in-app purchases. Apple Intelligence requires no separate provider key or Reboot charge. If you use Claude, GPT, or Gemini, that provider bills your own API account under its pricing. The app never sees your payment details and takes no share.</p>
 
   <h3>Is my data private?</h3>
-  <p>The app is local-first: there is no publisher server, account, analytics, or third-party tracking. Ask sends your explicit question or attachment plus the context named in its consent sheet only when you choose to ask; encrypted backup goes only to the destination you choose. See the <a href="privacy.html">Privacy Policy</a> for the full detail.</p>
+  <p>The app is local-first: there is no publisher server, account, analytics, advertising, or third-party tracking. Apple Intelligence runs through Apple&rsquo;s on-device Foundation Models path. A cloud Ask request goes directly to the provider you select and includes only your explicit question or attachment plus the context named in the consent sheet. Encrypted backup goes only to the destination you choose. See the <a href="privacy.html">Privacy Policy</a> for the full detail.</p>
 
   <h3>How do I delete my data?</h3>
   <p>Because everything is stored locally, deleting the app removes all of your data. You can also reset your information from within the app&rsquo;s Settings.</p>
